@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misFunciones.js"></script>
+    <title>Tutoria </title>
+</head>
+
+<body>
+    <h1> Reto 5 - Frat Quintero</h1>
+    <h2>Specialty </h2>
+    <div id="resultado1"></div>
+    <script type="text/javascript">
+        window.onload = autoInicioCategoria();
+    </script>
+    <div>
+        <input type="text" id="Cname" placeholder="nombre">
+        <input type="text" id="Cdescription" placeholder="descripcion">
+
+    </div>
+    <button onclick="guardarInformacionCategorias()">Guardar Specialty</button>
+    <!--Tabla Ortesis-->
+    <h2>Doctors </h2>
+    <div id="resultado2"></div>
+    <script type="text/javascript">
+        window.onload = autoInicioOrtesis();
+    </script>
+    <div>
+        <input type="text" id="Oname" placeholder="nombre">
+        <input type="text" id="Obrand" placeholder="especialidad">
+        <input type="number" id="Oyear" placeholder="año">
+        <input type="text" id="Odescription" placeholder="descripcion">
+        <select id="select-category"></select>
+    </div>
+    <button onclick="guardarInformacionOrtesis()">Guardar Doctor</button>
+
+    <!--Tabla Cliente-->
+    <h2>Client </h2>
+    <div id="resultado3"></div>
+    <script type="text/javascript">
+        window.onload = autoInicioCliente();
+    </script>
+    <div>
+        <input type="text" id="Clemail" placeholder="email">
+        <input type="text" id="Clpassword" placeholder="password">
+        <input type="text" id="Clname" placeholder="nombre">
+        <input type="number" id="Clage" placeholder="edad">
+    </div>
+    <button onclick="guardarInformacionCliente()">Guardar Client</button>
+
+    <h1> Reportes</h1>
+
+    <button onclick="traerReporteStatus()">Reporte Status Reservas </button>
+    <div id="resultadoStatus"></div>
+
+    
+    <input type="date" id="RstarDate" placeholder="descripcion">
+    <input type="date" id="RdevolutionDate" placeholder="descripcion">
+    <button onclick="traerReporteDate()">Reporte por fecha </button>
+    <div id="resultadoDate"></div>
+
+    
+    <button onclick="traerReporteClientes()">Reporte Clientes y Cantidad de reservas</button>
+    <div id="resultadoClientes"></div>
+
+</body>
+
+</html>
